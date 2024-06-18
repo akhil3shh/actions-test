@@ -3,13 +3,13 @@ name: "Dependent jobs"
 on: ['push']
 
 jobs:
-    JOB1:
+    JOB2:
         runs-on: ubuntu-latest
-        needs: JOB2
+        needs: JOB1
         steps:
            - name: StepA
              run: echo "World" 
-    JOB2:
+    JOB1:
         runs-on: ubuntu-latest
         steps:
           - name: StepB
